@@ -4,4 +4,15 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
-createApp(App).use(store).use(router).mount('#app')
+import UI from '~/index'
+import '~/base.scss'
+
+// import ElementPlus from 'element-plus'
+// import 'element-plus/dist/index.css'
+
+const app = createApp(App)
+// app.use(ElementPlus)
+UI.install(app);
+app.use(store).use(router)
+app.mount('#app')
+

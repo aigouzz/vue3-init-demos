@@ -1,30 +1,46 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <el-config-provider :locale="zhCn">
+    <Page :components="components" title="组件测试" />
+  </el-config-provider>
 </template>
+<script setup lang="ts">
+import {} from 'vue'
+import signVue from './components/sign.vue'
+import anchorVue from './components/anchor.vue'
+import commentVue from './components/comment.vue'
+import dialogVue from './components/dialog.vue'
+import editorVue from './components/editor.vue'
+import iconVue from './components/icon.vue'
+import noticeBarVue from './components/notice-bar.vue'
+import searchVue from './components/search.vue'
+import tagsVue from './components/tags.vue'
+import testVue from './components/test.vue'
+import chatVue from './components/chat.vue'
+import { ElConfigProvider } from 'element-plus'
+import zhCn from 'element-plus/lib/locale/lang/zh-cn'
+import Page from './components/Page.vue'
+console.log(commentVue.__name)
+const components = [
+  commentVue,
+  chatVue,
+  searchVue,
+  noticeBarVue,
+  anchorVue,
+  dialogVue,
+  editorVue,
+  iconVue,
+  tagsVue,
+  testVue,
+  signVue
+]
+</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+body {
+  font-size: 12px;
 }
 </style>
