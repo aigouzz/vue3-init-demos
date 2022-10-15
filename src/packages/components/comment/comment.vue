@@ -44,10 +44,6 @@ import {
 } from './interface'
 import { InjectionEmojiApi } from '../emoji/interface'
 
-defineOptions({
-  name: 'UComment'
-})
-
 interface Props {
   config: ConfigApi
 }

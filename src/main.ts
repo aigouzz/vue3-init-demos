@@ -12,7 +12,7 @@ import '~/base.scss'
 
 const app = createApp(App)
 // app.use(ElementPlus)
-UI.install(app);
-app.use(store).use(router)
+
+app.use(UI).use(store).use(router)
 app.mount('#app')
 

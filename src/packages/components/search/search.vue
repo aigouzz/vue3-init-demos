@@ -93,10 +93,6 @@ interface Props {
 
 const props = defineProps<Props>()
 
-defineOptions({
-  name: 'USearch'
-})
-
 const inputRef = ref({} as HTMLInputElement)
 
 const keywords = toRef(props.config, 'keywords')

@@ -18,10 +18,6 @@
 import { computed, nextTick, onMounted, reactive, ref } from 'vue'
 import { ElCarousel } from '~/element'
 
-defineOptions({
-  name: 'UNoticeBar'
-})
-
 interface Props {
   data: any
   size?: number | string

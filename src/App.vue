@@ -19,7 +19,7 @@ import chatVue from './components/chat.vue'
 import { ElConfigProvider } from 'element-plus'
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import Page from './components/Page.vue'
-console.log(commentVue.__name)
+
 const components = [
   commentVue,
   chatVue,

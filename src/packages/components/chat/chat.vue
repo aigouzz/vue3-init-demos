@@ -74,10 +74,6 @@ interface Props {
 
 const props = defineProps<Props>()
 
-defineOptions({
-  name: 'UChat'
-})
-
 const active = ref(false)
 const content = ref('')
 const messageRef = ref()

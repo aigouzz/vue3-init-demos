@@ -31,10 +31,6 @@ import ContextMenu from './context-menu.vue'
 import { ElScrollbar } from '~/element'
 import { TagApi } from '.'
 
-defineOptions({
-  name: 'UTags'
-})
-
 interface Props {
   classic?: boolean
   modelValue: TagApi[]

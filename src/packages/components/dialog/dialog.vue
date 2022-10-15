@@ -32,10 +32,6 @@
 import { ref, watch } from 'vue'
 import { ElDialog } from '~/element'
 
-defineOptions({
-  name: 'UDialog'
-})
-
 interface Props {
   title?: string
   modelValue: boolean

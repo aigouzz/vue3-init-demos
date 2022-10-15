@@ -22,10 +22,6 @@ interface toastApiType {
   type?: string
 }
 
-defineOptions({
-  name: 'UToast'
-})
-
 const props = withDefaults(defineProps<toastApiType>(), {
   message: '',
   duration: 2000,

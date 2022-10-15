@@ -25,10 +25,6 @@ import formVue from './form.vue'
 import { ElButton } from 'element-plus'
 // import 'element-plus/es/components/button/style/css'
 
-defineOptions({
-  name: 'USign'
-})
-
 const emit = defineEmits<{
   (e: 'submit', form: SignApi): void
 }>()

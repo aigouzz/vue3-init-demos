@@ -67,10 +67,6 @@ import { ref } from 'vue'
 import { EmojiApi } from '~/components'
 import { ElPopover, ElImage, ElScrollbar } from '~/element'
 
-defineOptions({
-  name: 'UEmoji'
-})
-
 interface Props {
   emoji: EmojiApi
   placement?: any

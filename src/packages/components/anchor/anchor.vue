@@ -19,10 +19,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 
-defineOptions({
-  name: 'UAnchor'
-})
-
 interface Props {
   // 指定监听的容器
   container: string

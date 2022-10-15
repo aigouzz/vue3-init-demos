@@ -16,10 +16,6 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 
-defineOptions({
-  name: 'UEditor'
-})
-
 interface Props {
   placeholder?: string
   modelValue: string

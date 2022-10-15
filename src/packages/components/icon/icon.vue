@@ -11,10 +11,6 @@
 import { computed } from 'vue'
 import { isNumber } from '~/util'
 
-defineOptions({
-  name: 'UIcon'
-})
-
 interface Props {
   name?: string
   size?: string | number

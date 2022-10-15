@@ -9,10 +9,6 @@
 <script setup lang="ts">
 import { onUnmounted, ref, watch } from 'vue'
 
-defineOptions({
-  name: 'UDivider'
-})
-
 interface Props {
   borderStyle?: string
   vertical?: boolean

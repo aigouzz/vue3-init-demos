@@ -33,11 +33,12 @@ interface Props {
 const props = defineProps<Props>()
 
 const currentTab = reactive({
+  __name: props.components[0].__name,
   components: markRaw(props.components[0])
 })
 
 const bindClass = (tab: any) => {
-  return currentTab === tab ? 'current-tab' : ''
+  return currentTab.__name === tab.__name ? 'current-tab' : ''
 }
 
 const switchTab = (tab: any) => {
