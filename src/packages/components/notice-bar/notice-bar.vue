@@ -1,8 +1,8 @@
 <template>
   <div class="u-notice-bar" :style="{ background, height: `${height}px` }">
     <div v-if="vertical">
-      <el-carousel height="40px" direction="vertical" :autoplay="true" indicator-position="none" :interval="interval">
-        <el-carousel-item v-for="v in data" :key="v">{{ v }}</el-carousel-item>
+      <el-carousel height="40px" :loop="true" direction="vertical" :autoplay="true" indicator-position="none" :interval="interval">
+        <el-carousel-item v-for="item in data" :key="item">{{ item }}</el-carousel-item>
       </el-carousel>
     </div>
     <div v-else :style="{ color, fontSize: `${size}px` }" class="u-notice-bar-wrap">
@@ -43,6 +43,7 @@ const props = withDefaults(defineProps<Props>(), {
   color: '--color-warning',
   background: 'var(--color-warning-light-9)'
 })
+console.log(props.data)
 
 const state = reactive({
   boxWidth: 0,
@@ -131,11 +132,8 @@ onMounted(() => {
   }
 }
 .el-carousel__item {
-  display: flex;
-  align-items: center;
+  height: 40px;
+  line-height: 40px;
 }
 
-.el-carousel__item.is-animating {
-  transition: transform 1s linear;
-}
 </style>
