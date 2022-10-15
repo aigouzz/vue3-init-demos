@@ -15,8 +15,8 @@ import { ref } from 'vue'
 const noticeList = ref([
   '🎉🎉🔥基于vue3.x 、Typescript、vite、Element plus等',
   '适配手机、平板、pc的后台开源免费模板库（vue2.x请切换vue-prev-admin分支）',
-  '仓库地址：https://gitee.com/lyt-top/vue-next-admin',
-  '演示地址：https://lyt-top.gitee.io/vue-next-admin-preview/#/login'
+  '仓库地址：https://github.com/aigouzz/vue3-init-demos',
+  '演示地址：https://aigouzz.github.io/demos'
 ])
 </script>
 

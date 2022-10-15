@@ -3,6 +3,8 @@ const path = require('path')
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  publicPath: '/demos/',
+  outputDir: '../aigouzz.github.io/demos',
   configureWebpack: {
     resolve: {
       alias: {
