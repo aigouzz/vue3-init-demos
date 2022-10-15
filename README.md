@@ -27,6 +27,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## commit config
+```js
 messages: {
     type: "选择你要提交的类型 :",
     scope: "选择一个提交范围（可选）:",
@@ -52,3 +53,4 @@ types: [
     {value: 'revert',   name: 'revert:      回退代码 | Revert to a commit', emoji: '⏪️'},
     {value: 'chore',    name: 'chore:       其他修改 | Other changes that do not modify src or test files', emoji: '🔨'},
 ]
+```
