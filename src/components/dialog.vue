@@ -15,7 +15,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { ElButton } from '~/index'
 
 const visible = ref(false)
 </script>

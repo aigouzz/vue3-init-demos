@@ -27,7 +27,6 @@ import { ClickOutside as vClickOutside } from 'element-plus'
 import { inject, nextTick, ref } from 'vue'
 import { EditorInstance } from '../editor'
 import { CommentSubmitParam, InjectionCommentFun, InjectionEmojiApi } from '~/index'
-import { ElButton } from '~/element'
 
 export interface CommentBoxApi {
   focus(): void

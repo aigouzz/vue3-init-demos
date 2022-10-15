@@ -8,7 +8,6 @@ export const withInstall = <T, E extends Record<string, any>>(main: T, extra?: E
       const name = 'U' + comp.__name.split('-').map((item:string) => {
         return item.substring(0,1).toUpperCase() + item.substring(1);
       }).join('')
-      console.log(name)
       app.component(name, comp)
     }
   }

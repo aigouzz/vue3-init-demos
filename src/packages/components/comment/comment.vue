@@ -31,7 +31,6 @@
 import { provide, toRef, useSlots } from 'vue'
 import CommentBox from './comment-box.vue'
 import CommentList from './comment-list.vue'
-import { ElAvatar } from '~/element'
 import {
   CommentApi,
   CommentSubmitParam,

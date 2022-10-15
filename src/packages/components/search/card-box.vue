@@ -62,7 +62,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { DataApi } from './search.vue'
-import { ElTag, ElButton } from '~/element'
 
 interface Props {
   data: DataApi

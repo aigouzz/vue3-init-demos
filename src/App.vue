@@ -1,10 +1,12 @@
 <template>
   <el-config-provider :locale="zhCn">
-    <Page :components="components" title="组件测试" />
+    <Page 
+    :components="components"
+    title="组件列表" 
+    />
   </el-config-provider>
 </template>
 <script setup lang="ts">
-import {} from 'vue'
 import signVue from './components/sign.vue'
 import anchorVue from './components/anchor.vue'
 import commentVue from './components/comment.vue'

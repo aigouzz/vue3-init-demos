@@ -11,7 +11,6 @@
 </template>
 
 <script setup lang="ts">
-import { ElPopover } from '~/element'
 
 interface Props {
   isUserInfo: boolean

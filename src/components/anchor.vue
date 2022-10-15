@@ -100,8 +100,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElScrollbar } from '~/index'
-
+// import {} from 'vue'
 </script>
 
 <style lang="scss" scoped>

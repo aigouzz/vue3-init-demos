@@ -9,7 +9,7 @@
           v-for="(tab, index) in components"
           :key="index"
           class="menu-li"
-          :class="bindClass(tab)"
+          :class="tab.__name === currentTab.__name ? 'current-tab' : ''"
           @click="switchTab(tab)"
         >
           {{ tab.__name }}
@@ -22,8 +22,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { markRaw, reactive, ref } from 'vue'
-import { ElScrollbar } from '~/element'
+import { markRaw, reactive } from 'vue'
 
 interface Props {
   title?: string
@@ -31,17 +30,14 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-
+console.log(props.components)
 const currentTab = reactive({
   __name: props.components[0].__name,
   components: markRaw(props.components[0])
 })
 
-const bindClass = (tab: any) => {
-  return currentTab.__name === tab.__name ? 'current-tab' : ''
-}
-
 const switchTab = (tab: any) => {
+  currentTab.__name = tab.__name
   currentTab.components = markRaw(tab)
 }
 </script>

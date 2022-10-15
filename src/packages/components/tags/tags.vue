@@ -28,7 +28,6 @@
 <script setup lang="ts">
 import { nextTick, onMounted, reactive, ref, toRef, watch } from 'vue'
 import ContextMenu from './context-menu.vue'
-import { ElScrollbar } from '~/element'
 import { TagApi } from '.'
 
 interface Props {

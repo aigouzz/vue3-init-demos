@@ -1,6 +1,6 @@
 <template>
   <i class="u-icon" :style="style">
-    <slot v-if="$slots.default" />
+    <slot name="default" v-if="$slots.default"></slot>
     <svg v-else aria-hidden="true">
       <use :xlink:href="name"></use>
     </svg>

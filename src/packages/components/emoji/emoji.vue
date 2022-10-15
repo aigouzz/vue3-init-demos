@@ -65,7 +65,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { EmojiApi } from '~/components'
-import { ElPopover, ElImage, ElScrollbar } from '~/element'
 
 interface Props {
   emoji: EmojiApi
