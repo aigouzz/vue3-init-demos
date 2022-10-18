@@ -16,7 +16,7 @@
                         >✕</span>
                 </div>
                 <div class="modal__content">
-                    <Content v-if="typeof content === 'function'" :render="content" />
+                    <Content v-if="typeof content === 'function'" :render="content" ></Content>
                     <slot v-else>
                         {{ content }}
                     </slot>

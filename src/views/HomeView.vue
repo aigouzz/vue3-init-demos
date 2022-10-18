@@ -1,8 +1,8 @@
 <template>
   <el-config-provider :locale="zhCn">
     <Page 
-    :components="components"
-    title="组件列表" 
+      :components="components"
+      title="组件列表" 
     />
   </el-config-provider>
 </template>
@@ -22,7 +22,7 @@ import { ElConfigProvider } from 'element-plus'
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import modalVue from '../components/modal.vue'
 import Page from '../components/Page.vue'
-console.log(modalVue)
+
 const components = [
   commentVue,
   chatVue,
