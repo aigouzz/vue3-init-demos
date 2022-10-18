@@ -3,12 +3,6 @@ interface toastType {
   options: toastTypeOptions
 }
 
-interface toastApiType {
-  message?: string
-  duration?: number
-  type?: string
-}
-
 interface toastTypeOptions {
   color: string
   bgColor: string

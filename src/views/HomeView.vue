@@ -1,19 +1,50 @@
 <template>
-  <div class="home">
-    <img 
-    alt="Vue logo"
-    src="../assets/logo.png"
-    >
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
+  <el-config-provider :locale="zhCn">
+    <Page 
+    :components="components"
+    title="组件列表" 
+    />
+  </el-config-provider>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'HomeView',
-  components: {
-  },
-});
+<script setup lang="ts">
+import signVue from '../components/sign.vue'
+import anchorVue from '../components/anchor.vue'
+import commentVue from '../components/comment.vue'
+import dialogVue from '../components/dialog.vue'
+import editorVue from '../components/editor.vue'
+import iconVue from '../components/icon.vue'
+import noticeBarVue from '../components/notice-bar.vue'
+import searchVue from '../components/search.vue'
+import tagsVue from '../components/tags.vue'
+import testVue from '../components/test.vue'
+import chatVue from '../components/chat.vue'
+import { ElConfigProvider } from 'element-plus'
+import zhCn from 'element-plus/lib/locale/lang/zh-cn'
+import modalVue from '../components/modal.vue'
+import Page from '../components/Page.vue'
+console.log(modalVue)
+const components = [
+  commentVue,
+  chatVue,
+  searchVue,
+  noticeBarVue,
+  anchorVue,
+  dialogVue,
+  editorVue,
+  iconVue,
+  tagsVue,
+  testVue,
+  signVue,
+  modalVue
+]
 </script>
+
+<style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 12px;
+}
+</style>

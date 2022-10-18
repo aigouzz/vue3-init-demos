@@ -30,7 +30,7 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-
+console.log(props.components)
 const currentTab = reactive({
   __name: props.components[0].__name,
   components: markRaw(props.components[0])
