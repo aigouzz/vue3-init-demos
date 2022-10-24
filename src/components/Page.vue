@@ -17,12 +17,14 @@
       </div>
     </el-scrollbar>
     <el-scrollbar class="container">
-      <component :is="currentTab.components"></component>
+      <router-view></router-view>
     </el-scrollbar>
   </div>
 </template>
 <script setup lang="ts">
 import { markRaw, reactive } from 'vue'
+import { RouterView } from 'vue-router'
+import router from '../router'
 
 interface Props {
   title?: string
@@ -32,13 +34,15 @@ interface Props {
 const props = defineProps<Props>()
 
 const currentTab = reactive({
-  __name: props.components[0].__name,
-  components: markRaw(props.components[0])
+  __name: props.components[0].__name
 })
 
 const switchTab = (tab: any) => {
+  const name = '/page/' + (tab.__name.indexOf('-') > 0 ? tab.__name.split('-').reduce((prev:string, item:string) => {
+    return prev + item.charAt(0).toUpperCase() + item.substring(1)
+  }) : tab.__name)
   currentTab.__name = tab.__name
-  currentTab.components = markRaw(tab)
+  router.push(name)
 }
 </script>
 

@@ -1,12 +1,12 @@
 <template>
   <el-config-provider :locale="zhCn">
-    <Page 
-      :components="components"
-      title="组件列表" 
-    />
+    <div>
+      <router-view :components="components" title="组件列表"></router-view>
+    </div>
   </el-config-provider>
 </template>
 <script setup lang="ts">
+import { RouterView } from 'vue-router'
 import signVue from '../components/sign.vue'
 import anchorVue from '../components/anchor.vue'
 import commentVue from '../components/comment.vue'
@@ -21,7 +21,6 @@ import chatVue from '../components/chat.vue'
 import { ElConfigProvider } from 'element-plus'
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import modalVue from '../components/modal.vue'
-import Page from '../components/Page.vue'
 
 const components = [
   commentVue,

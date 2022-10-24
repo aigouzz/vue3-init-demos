@@ -1,5 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
-const path = require('path')
+const BundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const path = require('path');
+const plugins = process.env.NODE_ENV === 'production' ? [new BundleAnalyzer()] : [];
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -11,6 +13,7 @@ module.exports = defineConfig({
         '~': path.resolve(__dirname, './src/packages'),
         '@': path.resolve(__dirname, './src')
       }
-    }
+    },
+    plugins,
   },
 })
